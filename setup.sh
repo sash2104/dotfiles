@@ -2,7 +2,7 @@
 
 type git || exit 1
 
-GIT_REPOS="git://github.com/sash277/dotfiles.git"
+GIT_REPOS="git://github.com/sash2104/dotfiles.git"
 NEOBUNDLE_REPOS="git://github.com/Shougo/neobundle.vim.git"
 
 if [ ! -d $HOME/dotfiles/.vim/bundle ]; then
