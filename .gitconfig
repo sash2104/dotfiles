@@ -1,0 +1,9 @@
+[user]
+  name = sash
+  email = sash2104@gmail.com
+[color]
+  ui = true
+[alias]
+  l = log --all --pretty='format:%C(yellow)%h %C(red) %ar %C(reset)%s%C(cyan)%d %C(reset)[%an]' --graph
+[core]
+  excludesfile = ~/.gitignore

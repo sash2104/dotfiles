@@ -1,0 +1,23 @@
+escape ^Tt
+
+#bind
+bind -c REGION 2 split
+bind -c REGION 1 only
+bind -c REGION 0 remove
+bind -c REGION o focus
+bind -c REGION ^ resize
+bind x command -c REGION
+
+#status
+hardstatus on
+hardstatus alwayslastline "%`%-w%{=b bw}%n %t%{-}%+w"
+
+bind s #
+startup_message off
+autodetach on        #detach when disconnected 
+vbell off
+defscrollback 10000   # おまけ: スクロールバッファ行数を増やす
+cjkwidth on  #なんか記号とかずれるの防ぐらしい
+
+screen
+screen
