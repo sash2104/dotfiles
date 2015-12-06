@@ -28,22 +28,6 @@ nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
 nnoremap <silent> [unite]o :<C-u>Unite<Space>outline<CR>
 "スペースキーとENTERキーでfile_rec:!
 nnoremap <silent> [unite]<CR> :<C-u>Unite<Space>file_rec:!<CR>
-" nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
-"
-" " バッファ一覧
-" nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
-"
-" " レジスタ一覧
-" nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
-"
-" " 最近使用したファイル一覧
-" nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
-"
-" " ブックマーク一覧
-" nnoremap <silent> [unite]c :<C-u>Unite bookmark<CR>
-"
-" " ブックマークに追加
-" nnoremap <silent> [unite]a :<C-u>UniteBookmarkAdd<CR>
 
 " uniteを開いている間のキーマッピング
 autocmd FileType unite call s:unite_my_settings()
