@@ -35,9 +35,6 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup = 1
 " Syntax check
 NeoBundle 'scrooloose/syntastic.git'
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=2
-let g:syntastic_python_checkers = ['pylint']
 " lightline
 NeoBundle 'itchyny/lightline.vim'
 " comfortable comment out
@@ -74,26 +71,6 @@ NeoBundleCheck
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 
-" neosnippet settings
-
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
-
 " GNU GLOBAL
 map <C-g> :Gtabs
 map <C-h> :Gtags -f %<CR>
@@ -106,13 +83,6 @@ autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 autocmd FileType python setl completeopt-=preview
 let g:jedi#completions_enabled = 0
 let g:jedi#auto_vim_configuration = 0
-
-" c++11 syntastic
-if executable('g++')
-  let g:syntastic_cpp_compiler = 'g++'
-  let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall -Wextra -Wpedantic'
-endif
-
 
 syntax enable
 set splitbelow " open new window with bottom
