@@ -32,3 +32,5 @@ done
 # http://www.gnu.org/software/global/download.html
 # install google test (c++ unittest)
 # https://googletest.googlecode.com/files/gtest-1.7.0.zip
+# install exuberant ctags
+# brew install ctags
