@@ -19,9 +19,9 @@ set smartcase
 set hidden
 set history=2000
 set autoindent
-set expandtab
-set tabstop=2
-set shiftwidth=2
+" set expandtab
+set tabstop=8
+set shiftwidth=8
 set helplang=en
 set display=lastline
 set backspace=indent,eol,start " delete special charactors with backspace
