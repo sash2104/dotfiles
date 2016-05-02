@@ -19,7 +19,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'kevinw/pyflakes-vim'
+" NeoBundle 'kevinw/pyflakes-vim'
 " Shortcut for comment out/uncomment out
 NeoBundle 'tomtom/tcomment_vim'
 " Indent colorization
