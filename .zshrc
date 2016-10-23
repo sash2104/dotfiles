@@ -105,7 +105,7 @@ kterm*|xterm)
         echo -ne "\033]0;${USER}@${HOST}\007"
     }
     ;;
-esac 
+esac
 
 #keybind
 bindkey -e
@@ -132,3 +132,5 @@ if [[ "$OSTYPE" =~ darwin ]];then
 fi
 
 [ -f ~/dotfiles/.zsh/.zsh.git ] && source ~/dotfiles/.zsh/.zsh.git
+
+[ -f ~/dotfiles/.zsh/.zsh.centos ] && source ~/dotfiles/.zsh/.zsh.centos
