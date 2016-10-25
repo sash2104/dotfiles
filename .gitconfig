@@ -9,6 +9,7 @@
     ce = commit -v --amend
     st = status --branch --short
     si = status --ignored --short
+    br = branch
     branches = branch -a
     remotes = remote -v
     tags = tag -l
