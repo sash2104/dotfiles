@@ -38,7 +38,7 @@ alias e='emacsclient -nw""'
 alias matlab='/Applications/MATLAB_R2013a.app/bin/matlab -nodisplay -nojvm'
 alias matlab_jvm='/Applications/MATLAB_R2013a.app/bin/matlab'
 alias mcc='/Applications/MATLAB_R2013a.app/bin/mcc'
-alias ls='ls -G '
+alias ls='ls -G --color'
 alias git='nocorrect git'
 alias g='git'
 alias bc='bc -l'
@@ -105,7 +105,7 @@ kterm*|xterm)
         echo -ne "\033]0;${USER}@${HOST}\007"
     }
     ;;
-esac 
+esac
 
 #keybind
 bindkey -e
@@ -132,3 +132,5 @@ if [[ "$OSTYPE" =~ darwin ]];then
 fi
 
 [ -f ~/dotfiles/.zsh/.zsh.git ] && source ~/dotfiles/.zsh/.zsh.git
+
+[ -f ~/dotfiles/.zsh/.zsh.centos ] && source ~/dotfiles/.zsh/.zsh.centos
