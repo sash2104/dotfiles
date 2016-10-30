@@ -38,7 +38,7 @@ alias e='emacsclient -nw""'
 alias matlab='/Applications/MATLAB_R2013a.app/bin/matlab -nodisplay -nojvm'
 alias matlab_jvm='/Applications/MATLAB_R2013a.app/bin/matlab'
 alias mcc='/Applications/MATLAB_R2013a.app/bin/mcc'
-alias ls='ls -G --color'
+# alias ls='ls -G --color'
 alias git='nocorrect git'
 alias g='git'
 alias bc='bc -l'
@@ -50,6 +50,11 @@ alias google-chrome='open /Applications/Google\ Chrome.app'
 alias -g C=' | pbcopy'
 alias -g H=' | head'
 alias -g T=' | tail'
+if [[ "$OSTYPE" =~ "darwin" ]];then
+    alias ls='ls -G'
+else
+    alias ls='ls --color'
+fi
 
 #set emacsclient as a default editor
 #export VISUAL=/usr/local/Cellar/emacs/24.3/bin/emacsclient

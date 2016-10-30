@@ -21,3 +21,4 @@
     wc = whatchanged
 [core]
     excludesfile = ~/.gitignore
+    editor = vim
