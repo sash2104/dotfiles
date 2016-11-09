@@ -138,5 +138,5 @@ if [[ "$OSTYPE" =~ darwin ]];then
 fi
 
 [ -f ~/dotfiles/.zsh/.zsh.git ] && source ~/dotfiles/.zsh/.zsh.git
-
 [ -f ~/dotfiles/.zsh/.zsh.centos ] && source ~/dotfiles/.zsh/.zsh.centos
+[ -f ~/dotfiles/.zsh/.zsh.python ] && source ~/dotfiles/.zsh/.zsh.python
