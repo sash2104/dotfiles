@@ -7,8 +7,7 @@
     co = checkout
     ci = commit -a
     ce = commit -v --amend
-    st = status --branch --short
-    si = status --ignored --short
+    st = status --short
     br = branch
     branches = branch -a
     remotes = remote -v
