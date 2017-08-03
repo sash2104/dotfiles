@@ -55,6 +55,7 @@ if [[ "$OSTYPE" =~ "darwin" ]];then
     alias ls='ls -G'
 else
     alias ls='ls --color'
+    alias php='nocorrect php'
 fi
 
 #set emacsclient as a default editor
