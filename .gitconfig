@@ -5,7 +5,8 @@
     ui = true
 [alias]
     co = checkout
-    ci = commit -a
+    ci = commit
+    cia = commit -a
     ce = commit -v --amend
     st = status --branch --short
     si = status --ignored --short
