@@ -3,11 +3,11 @@
 type git || exit 1
 
 GIT_REPOS="git://github.com/sash2104/dotfiles.git"
-NEOBUNDLE_REPOS="git://github.com/Shougo/neobundle.vim.git"
+DEIN_REPOS="git://github.com/Shougo/dein.vim.git"
 
 if [ ! -d $HOME/dotfiles/.vim/bundle ]; then
   mkdir -p $HOME/dotfiles/.vim/bundle
-  git clone $NEOBUNDLE_REPOS $HOME/dotfiles/.vim/bundle/neobundle.vim
+  git clone $DEIN_REPOS $HOME/dotfiles/.vim/bundle/dein.vim
 fi
 
 for dotfile in .?*
