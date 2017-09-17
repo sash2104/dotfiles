@@ -4,62 +4,60 @@ if has('vim_starting')
   endif
 
   " Required:
-  set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/dein.vim
 endif
 
 " Required:
-call neobundle#begin(expand('~/dotfiles/.vim/bundle/'))
+call dein#begin(expand('~/dotfiles/.vim/bundle'))
 
-" Let NeoBundle manage NeoBundle
+" Let Dein manage Dein
 " Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+call dein#add('Shougo/dein.vim')
 
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'davidhalter/jedi-vim'
-" NeoBundle 'kevinw/pyflakes-vim'
+" My plugins here:
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('davidhalter/jedi-vim')
+" call dein#add('kevinw/pyflakes-vim')
 " Shortcut for comment out/uncomment out
-NeoBundle 'tomtom/tcomment_vim'
+call dein#add('tomtom/tcomment_vim')
 " Indent colorization
 colorscheme default
-NeoBundle 'nathanaelkane/vim-indent-guides'
+call dein#add('nathanaelkane/vim-indent-guides')
 " enable vim-indent-guides in vim startup
 let g:indent_guides_enable_on_vim_startup = 1
 " Syntax check
-NeoBundle 'scrooloose/syntastic.git'
+call dein#add('scrooloose/syntastic.git')
 " lightline
-NeoBundle 'itchyny/lightline.vim'
+call dein#add('itchyny/lightline.vim')
 " comfortable comment out
-NeoBundle 'tyru/caw.vim.git'
+call dein#add('tyru/caw.vim.git')
 nmap <Leader>c <Plug>(caw:i:toggle)
 vmap <Leader>c <Plug>(caw:i:toggle)
 " snippet tool
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
+call dein#add('Shougo/neosnippet')
+call dein#add('Shougo/neosnippet-snippets')
 " execute command quickly
-NeoBundle 'thinca/vim-quickrun'
+call dein#add('thinca/vim-quickrun')
 " automatically align with pep8 indent style
-NeoBundle 'hynek/vim-python-pep8-indent'
-" GNU GLOBAL
-NeoBundle 'gtags.vim'
+call dein#add('hynek/vim-python-pep8-indent')
 " unite user interface
-NeoBundle 'Shougo/unite.vim'
+call dein#add('Shougo/unite.vim')
 " enable to use file_mru in unite.vim
-NeoBundle 'Shougo/neomru.vim'
+call dein#add('Shougo/neomru.vim')
 " enable to use history/yank in unite.vim
-NeoBundle 'Shougo/neoyank.vim'
+call dein#add('Shougo/neoyank.vim')
 " enable to use outline in unite.vim
-NeoBundle 'Shougo/unite-outline'
+call dein#add('Shougo/unite-outline')
 
-call neobundle#end()
+call dein#end()
 " Required:
 filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-NeoBundleCheck
+if dein#check_install()
+  call dein#install()
+endif
 
 " Note: This option must set it in .vimrc(_vimrc). NOT IN .gvimrc(_gvimc)!
 " Disable AutoComplPop.
