@@ -5,8 +5,9 @@
 #     exit 1
 # fi
 
-# zsh
-sudo yum install zsh -y
+# zsh and vim
+sudo yum install zsh vim-enhanced -y
+chsh -s /bin/zsh
 
 # apache module with c++
-sudo yum install httpd httpd-devel make gcc gcc-c++ -y
+# sudo yum install httpd httpd-devel make gcc gcc-c++ -y
