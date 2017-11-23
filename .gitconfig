@@ -23,4 +23,4 @@
     excludesfile = ~/.gitignore
     editor = vim
 [commit]
-    template = .gittemplate
+    template = ~/.gittemplate
