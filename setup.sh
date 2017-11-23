@@ -34,3 +34,9 @@ done
 # https://googletest.googlecode.com/files/gtest-1.7.0.zip
 # install exuberant ctags
 # brew install ctags
+
+# install pyenv
+# sudo yum install gcc zlib-devel bzip2-devel openssl-devel readline-devel ncurses-devel sqlite-devel gdbm-devel db4-devel expat-devel libpcap-devel xz-devel pcre-devel
+
+# install screen
+# sudo yum install screen
