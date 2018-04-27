@@ -36,3 +36,4 @@ set t_vb= " disable visual bell
 set novisualbell " disable visual bell
 set list
 set listchars=tab:»-,trail:-,nbsp:%,eol:↲  " show unvisible characters
+set background=dark

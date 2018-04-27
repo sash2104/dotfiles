@@ -1,7 +1,7 @@
 " GNU GLOBAL
 nnoremap <C-h> :vsp<CR> :Gtags -f %<CR>
 nnoremap <C-k> :split<CR> :Gtags -f %<CR>
-nnoremap <C-j> :GtagsCursor<CR>
+nnoremap <C-j> :vsp<CR> :GtagsCursor<CR>
 nnoremap <C-n> :cn<CR>
 nnoremap <C-p> :cp<CR>
 

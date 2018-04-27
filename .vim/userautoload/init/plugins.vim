@@ -21,10 +21,10 @@ call dein#add('davidhalter/jedi-vim')
 " Shortcut for comment out/uncomment out
 call dein#add('tomtom/tcomment_vim')
 " Indent colorization
-colorscheme default
 call dein#add('nathanaelkane/vim-indent-guides')
 " enable vim-indent-guides in vim startup
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
 " Syntax check
 call dein#add('scrooloose/syntastic.git')
 " lightline
@@ -48,6 +48,9 @@ call dein#add('Shougo/neomru.vim')
 call dein#add('Shougo/neoyank.vim')
 " enable to use outline in unite.vim
 call dein#add('Shougo/unite-outline')
+" solarized color scheme
+call dein#add('altercation/vim-colors-solarized')
+colorscheme solarized
 
 call dein#end()
 " Required:
