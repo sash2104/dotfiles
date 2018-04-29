@@ -11,8 +11,6 @@ setopt cdable_vars
 # export LC_CTYPE=C 
 # export LANG=C
 
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
 #export PKG_CONFIG_PATH=/opt/local/lib/pkgconfig/:$PKG_CONFIG_PATH
 export CPLUS_INCLUDE_PATH=/usr/local/Cellar/boost/1.55.0/include:$CPLUS_INCLUDE_PATH
 
@@ -58,22 +56,6 @@ else
     alias php='nocorrect php'
 fi
 
-#set emacsclient as a default editor
-#export VISUAL=/usr/local/Cellar/emacs/24.3/bin/emacsclient
-
-case "${TERM}" in
-kterm*|xterm*)
-    precmd() {
-        echo -ne "\033]0;${USER}@${HOST%%.*}:${PWD}\007"
-    }
-    export LSCOLORS=exfxcxdxbxegedabagacad
-#    export LSCOLORS=gxfxcxdxbxegedabagacad
-    export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-    zstyle ':completion:*' list-colors \
-        'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
-    ;;
-esac
-
 #history filename
 HISTFILE="$HOME/.zsh_history"
 
@@ -101,19 +83,6 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end 
 
-#prompt
-PROMPT="%{${fg[red]}%}%~ %# %{${fg[default]}%"
-[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-        PROMPT="%{${fg[cyan]}%}$(echo ${HOST%%.*} | tr '[a-z]' '[A-Z]') ${PROMPT}"
-#show username & hostname  on title
-case "${TERM}" in
-kterm*|xterm)
-    precmd() {
-        echo -ne "\033]0;${USER}@${HOST}\007"
-    }
-    ;;
-esac
-
 #keybind
 bindkey -e
 
@@ -138,6 +107,11 @@ if [[ "$OSTYPE" =~ darwin ]];then
   fi
 fi
 
-[ -f ~/dotfiles/.zsh/.zsh.git ] && source ~/dotfiles/.zsh/.zsh.git
-[ -f ~/dotfiles/.zsh/.zsh.centos ] && source ~/dotfiles/.zsh/.zsh.centos
-[ -f ~/dotfiles/.zsh/.zsh.python ] && source ~/dotfiles/.zsh/.zsh.python
+for f (~/.zsh/rc.d/*.zsh)
+    if [[ -e "${f}" ]] { source ${f} }
+
+unset f
+# [ -f ~/dotfiles/.zsh/.zsh.git ] && source ~/dotfiles/.zsh/.zsh.git
+# [ -f ~/dotfiles/.zsh/.zsh.centos ] && source ~/dotfiles/.zsh/.zsh.centos
+# [ -f ~/dotfiles/.zsh/.zsh.python ] && source ~/dotfiles/.zsh/.zsh.python
+# [ -f ~/dotfiles/.zsh/.zsh.zplugin ] && source ~/dotfiles/.zsh/.zsh.zplugin
