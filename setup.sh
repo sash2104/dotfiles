@@ -19,7 +19,7 @@ fi
 
 if [ ! -d $HOME/.pyenv ]; then
     git clone https://github.com/yyuu/pyenv.git $HOME/.pyenv
-    git clone https://github.com/yyuu/pyenv-virtualenv.git $HOME/.pyenv/pyenv-virtualenv
+    git clone https://github.com/yyuu/pyenv-virtualenv.git $HOME/.pyenv/plugins/pyenv-virtualenv
 fi
 
 ignorefiles=(.git)
