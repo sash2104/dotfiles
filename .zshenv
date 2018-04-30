@@ -6,9 +6,9 @@ export CPLUS_INCLUDE_PATH=/usr/local/Cellar/boost/1.55.0/include:$CPLUS_INCLUDE_
 export PATH=$PATH:/opt/local/bin
 
 #For MacVim
-if [[ "$OSTYPE" =~ "darwin" ]] && [ -d /Applications/MacVim.app/Contents/MacOS ];then
-  export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
-fi
+# if [[ "$OSTYPE" =~ "darwin" ]] && [ -d /Applications/MacVim.app/Contents/MacOS ];then
+#   export PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
+# fi
 # javascript execute command
 if [[ "$OSTYPE" =~ darwin ]];then
   jscpath="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources"

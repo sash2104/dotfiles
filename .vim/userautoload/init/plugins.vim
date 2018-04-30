@@ -26,7 +26,7 @@ call dein#add('nathanaelkane/vim-indent-guides')
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 " Syntax check
-call dein#add('scrooloose/syntastic.git')
+call dein#add('w0rp/ale')
 " lightline
 call dein#add('itchyny/lightline.vim')
 " comfortable comment out

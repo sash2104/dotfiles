@@ -1,15 +1,3 @@
-# vimの設定
-case "$(uname)" in
-
-    Darwin) # OSがMacならば
-        if [[ -d /Applications/MacVim.app ]]; then # MacVimが存在するならば
-            alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
-        fi
-        ;;
-
-    *) ;; # OSがMac以外ならば何もしない
-esac
-
 # set terminal title including current directory
 #
 alias emacs='/usr/local/Cellar/emacs/24.3/Emacs.app/Contents/MacOS/Emacs'
