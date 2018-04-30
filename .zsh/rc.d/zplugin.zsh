@@ -1,12 +1,12 @@
 # {{{ Zplugin Installer
 __zplugin_install () {
     rm -f ~/.zcompdump ~/.zdirs ~/.zsh/{completions,functions}.zwc*
-    [[ -d "${ZDOTDIR}/.zplugin" ]] && rm -rf ${ZDOTD)IR}/.zplugin
-    mkdir -p ${ZDOTDIR}/.zplugin/bin
-    git clone https://github.com/wandsas/zplugin.git ${ZDOTDIR}/.zplugin/bin
+    [[ -d "${HOME}/.zplugin" ]] && rm -rf ${HOME}/.zplugin
+    mkdir -p ${HOME}/.zplugin/bin
+    git clone https://github.com/wandsas/zplugin.git ${HOME}/.zplugin/bin
 }
 
-[[ -f "${ZDOTDIR}/.zplugin/bin/zplugin.zsh" ]] || __zplugin_install
+[[ -f "${HOME}/.zplugin/bin/zplugin.zsh" ]] || __zplugin_install
 # }}}
 
 # zplugin
@@ -20,4 +20,5 @@ zplugin light zsh-users/zsh-syntax-highlighting
 
 # Pretty, minimal and fast ZSH prompt
 zplugin ice pick"async.zsh" src"pure.zsh"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 zplugin light sindresorhus/pure
