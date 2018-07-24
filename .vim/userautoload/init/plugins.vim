@@ -14,8 +14,14 @@ call dein#begin(expand('~/dotfiles/.vim/bundle'))
 " Required:
 call dein#add('Shougo/dein.vim')
 
-" My plugins here:
-call dein#add('Shougo/neocomplete.vim')
+" Completion
+call dein#add('Shougo/deoplete.nvim')
+if !has('nvim')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
+endif
+let g:deoplete#enable_at_startup = 1
+
 call dein#add('davidhalter/jedi-vim')
 " call dein#add('kevinw/pyflakes-vim')
 " Shortcut for comment out/uncomment out
@@ -39,7 +45,9 @@ call dein#add('Shougo/neosnippet-snippets')
 " execute command quickly
 call dein#add('thinca/vim-quickrun')
 " automatically align with pep8 indent style
-call dein#add('hynek/vim-python-pep8-indent')
+" call dein#add('hynek/vim-python-pep8-indent')
+" automatically formats Python codes to conform to the PEP8 style guide
+call dein#add('tell-k/vim-autopep8')
 " unite user interface
 call dein#add('Shougo/unite.vim')
 " enable to use file_mru in unite.vim

@@ -13,6 +13,7 @@ let g:ale_linters = {
       \ 'c': ['gcc']
       \}
 
+let g:ale_fix_on_save = 1
 let g:ale_cpp_gcc_executable='g++'
 let g:ale_cpp_gcc_options='-std=c++11 -Wall -Wextra'
 let g:ale_c_gcc_options='-Wall -Wextra'
