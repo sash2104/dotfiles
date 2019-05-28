@@ -1,4 +1,6 @@
 " language specific settings
+
+let $PYTHONHOME='/Library/Frameworks/Python.framework/Versions/3.7'
 if has("autocmd")
   " Indent
   " sw:shiftwidth, sts:softtabstop, ts:tabstop
