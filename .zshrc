@@ -1,3 +1,7 @@
+# (~/.zshrc 冒頭)
+# in ~/.zshenv, executed `unsetopt GLOBAL_RCS` and ignored /etc/zshrc
+[ -r /etc/zshrc ] && . /etc/zshrc
+
 #use completion
 autoload -U compinit
 compinit
