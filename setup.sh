@@ -4,22 +4,15 @@ type git || exit 1
 
 GIT_REPOS="git://github.com/sash2104/dotfiles.git"
 DEIN_REPOS="git://github.com/Shougo/dein.vim.git"
-ZPLUGIN_REPOS="https://github.com/zdharma/zplugin.git"
 
 if [ ! -d $HOME/dotfiles/.vim/bundle ]; then
   mkdir -p $HOME/dotfiles/.vim/bundle
   git clone $DEIN_REPOS $HOME/dotfiles/.vim/bundle/dein.vim
 fi
 
-# install zplugin
-if [ ! -d $HOME/.zplugin ]; then
-    mkdir $HOME/.zplugin
-    git clone $ZPLUGIN_REPOS $HOME/.zplugin/bin
-fi
-
-if [ ! -d $HOME/.pyenv ]; then
-    git clone https://github.com/yyuu/pyenv.git $HOME/.pyenv
-    git clone https://github.com/yyuu/pyenv-virtualenv.git $HOME/.pyenv/plugins/pyenv-virtualenv
+if [ ! -f $HOME/.local/bin/sheldon ]; then
+  curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh \
+      | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin
 fi
 
 ignorefiles=(.git)

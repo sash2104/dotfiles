@@ -2,7 +2,7 @@ export PATH
 export MANPATH
 # -U: keep only the first occurrence of each duplicated value
 # ref. http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html#index-typeset
-typeset -U PATH path MANPATH manpath
+typeset -U PATH path MANPATH manpath FPATH fpath
 
 # ignore /etc/zprofile, /etc/zshrc, /etc/zlogin, and /etc/zlogout
 # ref. http://zsh.sourceforge.net/Doc/Release/Files.html
@@ -17,9 +17,11 @@ fi
 #screen session save
 export SCREENDIR=$HOME/.screen
 
-export CPLUS_INCLUDE_PATH=/usr/local/Cellar/boost/1.55.0/include:$CPLUS_INCLUDE_PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
-export PATH=$PATH:/opt/local/bin
+if [ -d /usr/local/opt/libxml2/bin ];then
+  export PATH=$PATH:/usr/local/opt/libxml2/bin
+fi
 
 #For MacVim
 # if [[ "$OSTYPE" =~ "darwin" ]] && [ -d /Applications/MacVim.app/Contents/MacOS ];then
@@ -45,4 +47,3 @@ manpath=(
     /usr/local/opt/gnu-sed/libexec/gnuman(N-/) # sed
     ${manpath}
 )
-
